@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">MotionTracking</string>
+    <string name="person">person</string>
+    <string name="bicycle">bicycle</string>
+    <string name="car">car</string>
+    <string name="bus">bus</string>
+    <string name="train">train</string>
+    <string name="detect_objects">Detect objects</string>
+    <string name="detection">Detection</string>
+    <string name="truck">truck</string>
 </resources>

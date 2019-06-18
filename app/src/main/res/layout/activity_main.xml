@@ -3,17 +3,111 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="500dp"
+            tools:context=".MainActivity">
 
-        <TextureView
-            android:id="@+id/texture"
+            <com.motiontracking.MyTextureView
+                android:id="@+id/texture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.motiontracking.MyCanvas
+                android:id="@+id/mycanvas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+        </FrameLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"/>
+            android:layout_height="150dp"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/detection"
+                android:textSize="@dimen/detection"
+                android:textColor="@color/black"
+                android:paddingLeft="@dimen/padding"
+                android:paddingBottom="@dimen/padding"
+                android:gravity="center"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+                <CheckBox
+                    android:id="@+id/checkbox_person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/person"
+                    android:buttonTint="@color/person"
+                    android:checked="true"
+                    android:paddingEnd="@dimen/label_padding"
+                    android:textSize="@dimen/label_size" />
+                <CheckBox
+                    android:id="@+id/checkbox_truck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/truck"
+                    android:buttonTint="@color/truck"
+                    android:checked="true"
+                    android:paddingEnd="@dimen/label_padding"
+                    android:textSize="@dimen/label_size"/>
+                <CheckBox
+                    android:id="@+id/checkbox_car"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/car"
+                    android:buttonTint="@color/car"
+                    android:checked="true"
+                    android:paddingEnd="@dimen/label_padding"
+                    android:textSize="@dimen/label_size"/>
+            </LinearLayout>
 
-    </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+                <CheckBox
+                    android:id="@+id/checkbox_bicycle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bicycle"
+                    android:buttonTint="@color/bicycle"
+                    android:checked="true"
+                    android:paddingEnd="@dimen/label_padding"
+                    android:textSize="@dimen/label_size"/>
+
+                <CheckBox
+                    android:id="@+id/checkbox_train"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/train"
+                    android:buttonTint="@color/train"
+                    android:checked="true"
+                    android:paddingEnd="@dimen/label_padding"
+                    android:textSize="@dimen/label_size"/>
+                <CheckBox
+                    android:id="@+id/checkbox_bus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bus"
+                    android:buttonTint="@color/bus"
+                    android:checked="true"
+                    android:paddingEnd="@dimen/label_padding"
+                    android:textSize="@dimen/label_size"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
 </layout>
